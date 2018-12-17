@@ -7,7 +7,7 @@
 
 <h3>Category: {{questionInfo?.category.title | titlecase}}</h3>
 <strong>The Question:</strong> {{questionInfo?.question}} <br>
-<input type="text" [(ngModel)]="guessedAnswer"/>
-<button (click)="evaluateAnswer(guessedAnswer)">Submit your answer!</button>
+<p>(Point Value: {{questionInfo?.value}} )</p>
+<app-answer #childC [questionInfo]="questionInfo" (pointsSend)="finishQuestion($event)"></app-answer>
 <br />
 <h3>Your score: ${{score}}</h3>

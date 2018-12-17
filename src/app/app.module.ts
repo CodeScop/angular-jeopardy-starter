@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DataService } from './data.service';
+import { AnswerComponent } from './answer/answer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

@@ -28,17 +28,11 @@ export class AppComponent implements OnInit {
   }
   score = 0;
 
-  guessedAnswer = "";
-
-  evaluateAnswer(guess){
-    console.log('Correct answer: ' + this.questionInfo.answer);
-    console.log('Guess saved as: ' + guess);
-    if (guess == this.questionInfo.answer){
-      this.score += this.questionInfo.value;
-    } else {
-      this.score -= this.questionInfo.value;
-    }
+  finishQuestion(points){
+    this.score += points;
     this.getQuestionInfo();
   }
+
+
 
 }
