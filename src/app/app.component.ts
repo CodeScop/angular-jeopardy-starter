@@ -8,7 +8,7 @@ import { DataService } from './data.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+  title = 'Jeopardy';
 
   questionInfo;
 
@@ -26,6 +26,19 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.getQuestionInfo()
   }
+  score = 0;
 
+  guessedAnswer = "";
+
+  evaluateAnswer(guess, question){
+    console.log('Correct answer: ' + question.answer);
+    console.log('Guess saved as: ' + guess);
+    if (guess == question.answer){
+      this.score += question.value;
+    } else {
+      this.score -= question.value;
+    }
+    this.getQuestionInfo();
+  }
 
 }

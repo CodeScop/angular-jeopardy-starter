@@ -12,7 +12,7 @@ displays the results from the api call on the main component.
 ## Advanced Mode
 Use two components.
 
-* Use app.coponent.ts to get and display the data
+* Use app.component.ts to get and display the data
 * create an answer component to do the scoring and pass the needed data to the parent to update the score display
 
 ## Nightmare Mode
