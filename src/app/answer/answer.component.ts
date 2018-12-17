@@ -13,16 +13,16 @@ export class AnswerComponent implements OnInit {
 
   ngOnInit() {
   }
-  guessedAnswer = "";
+  guessedAnswer = '';
 
-  evaluateAnswer(guess){
+  evaluateAnswer(){
     console.log('Correct answer: ' + this.questionInfo.answer);
-    console.log('Guess saved as: ' + guess);
-    if (guess == this.questionInfo.answer){
+    console.log('Guess saved as: ' + this.guessedAnswer);
+    if (this.guessedAnswer == this.questionInfo.answer){
       this.pointsSend.emit(this.questionInfo.value);
     } else {
       this.pointsSend.emit(this.questionInfo.value * -1);
     }
-    
+    this.guessedAnswer = '';
   }
 }
