@@ -30,13 +30,13 @@ export class AppComponent implements OnInit {
 
   guessedAnswer = "";
 
-  evaluateAnswer(guess, question){
-    console.log('Correct answer: ' + question.answer);
+  evaluateAnswer(guess){
+    console.log('Correct answer: ' + this.questionInfo.answer);
     console.log('Guess saved as: ' + guess);
-    if (guess == question.answer){
-      this.score += question.value;
+    if (guess == this.questionInfo.answer){
+      this.score += this.questionInfo.value;
     } else {
-      this.score -= question.value;
+      this.score -= this.questionInfo.value;
     }
     this.getQuestionInfo();
   }

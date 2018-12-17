@@ -8,6 +8,6 @@
 <h3>Category: {{questionInfo?.category.title | titlecase}}</h3>
 <strong>The Question:</strong> {{questionInfo?.question}} <br>
 <input type="text" [(ngModel)]="guessedAnswer"/>
-<button (click)="evaluateAnswer(guessedAnswer, questionInfo, score)">Submit your answer!</button>
+<button (click)="evaluateAnswer(guessedAnswer)">Submit your answer!</button>
 <br />
 <h3>Your score: ${{score}}</h3>
